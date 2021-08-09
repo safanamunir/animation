@@ -1,0 +1,15 @@
+<div @todosAnimation >
+<h1>Todos</h1>
+    <input #itemInput
+        class="form-control" 
+        type="text" 
+        (keyup.enter)="addItem(itemInput)">
+
+<div @todoAnimation class="list-group" *ngFor = "let item of items">
+    <button type="button"  class="list-group-item"
+    @todoAnimation
+    (click)="removeItem(item)"
+    >{{item}}</button>
+</div>
+
+</div>
